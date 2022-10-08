@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import { Container } from "@nextui-org/react";
-import Hero from "@components/hero";
 
 const Home: NextPage = () => {
   return (
@@ -17,7 +16,7 @@ const Home: NextPage = () => {
         height: "100vh",
       }}
     >
-      <Hero />
+      <h1>Hello, Ecthon</h1>
     </Container>
   );
 };
