@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import { Container } from "@nextui-org/react";
+import { Main } from "@components/Main";
+import { url } from "inspector";
 
 const Home: NextPage = () => {
   return (
@@ -12,11 +14,10 @@ const Home: NextPage = () => {
       justify={"center"}
       direction={"row"}
       css={{
-        linearGradient: "45deg, $dinoCodePink -90%, $dinoCodePurple 100%",
         height: "100vh",
       }}
     >
-      <h1>Hello, Ecthon</h1>
+      <Main />
     </Container>
   );
 };
