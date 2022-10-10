@@ -1,5 +1,6 @@
-import { Image, Link, Navbar } from "@nextui-org/react";
+import { Col, Image, Link, Navbar } from "@nextui-org/react";
 import NavbarBrand from "@nextui-org/react/types/navbar/navbar-brand";
+import { useHover } from "usehooks-ts";
 
 export function NavBar() {
     const collapseItems = [
@@ -15,7 +16,8 @@ export function NavBar() {
                 $$navbarBackgroundColor: "transparent",
                 $$navbarShadow: "0",
                 $$navbarBlur: "0%",
-                $$navbarTextColor: "white"
+                $$navbarTextColor: "white",
+                background: "transparent"
             }}
         >
             <Navbar.Brand>
@@ -36,13 +38,19 @@ export function NavBar() {
                     <Navbar.Toggle color="primary" aria-label="toggle navigation" />
                 </Navbar.Item>
             </Navbar.Content>
-            <Navbar.Collapse>
+            <Navbar.Collapse
+                css={{
+                    bg: "transparent",
+                }}
+            >
                 {collapseItems.map((item, index) => (
                     <Navbar.CollapseItem key={item}>
                         <Link
-                            color="inherit"
                             css={{
-                                minWidth: "100%"
+                                color: "white",
+                                minWidth: "100%",
+                                fontSize: "2rem",
+                                fontWeight: "$semibold",
                             }}
                             href="#"
                         >
