@@ -1,5 +1,7 @@
-import { Col, Image, Link, Navbar } from "@nextui-org/react";
+import { Col, Image, Link, Navbar, Row } from "@nextui-org/react";
 import NavbarBrand from "@nextui-org/react/types/navbar/navbar-brand";
+import { BsInstagram } from "react-icons/bs";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { useHover } from "usehooks-ts";
 
 export function NavBar() {
@@ -17,7 +19,7 @@ export function NavBar() {
                 $$navbarShadow: "0",
                 $$navbarBlur: "0%",
                 $$navbarTextColor: "white",
-                background: "transparent"
+                background: "transparent",
             }}
         >
             <Navbar.Brand>
@@ -44,13 +46,19 @@ export function NavBar() {
                 }}
             >
                 {collapseItems.map((item, index) => (
-                    <Navbar.CollapseItem key={item}>
+                    <Navbar.CollapseItem
+                        key={item}
+                    >
                         <Link
                             css={{
-                                color: "white",
+                                color: "#2B2F35",
                                 minWidth: "100%",
                                 fontSize: "2rem",
                                 fontWeight: "$semibold",
+                                transition: "color 0.2s",
+                                '&:hover': {
+                                    color: "#514EFF"
+                                }
                             }}
                             href="#"
                         >
@@ -58,6 +66,35 @@ export function NavBar() {
                         </Link>
                     </Navbar.CollapseItem>
                 ))}
+
+                <Row
+                    css={{
+                        width: "208px",
+                        // justifyContent: "space-between",
+                        alignItem: "center",
+                        mt: "2rem",
+                        // margin: "0 auto"
+                    }}
+                >
+                    <Link css={{
+                        padding: "0.5rem",
+                        borderRadius: "$rounded",
+                        background: "#2B2F35",
+                        mr: "2rem"
+                    }}><FaLinkedin size={18} color="#0D1117" /></Link>
+                    <Link css={{
+                        padding: "0.5rem",
+                        borderRadius: "$rounded",
+                        background: "#2B2F35",
+                        mr: "2rem"
+                    }}><FaGithub size={18} color="#0D1117" /></Link>
+                    <Link css={{
+                        padding: "0.5rem",
+                        borderRadius: "$rounded",
+                        background: "#2B2F35"
+                    }}><BsInstagram size={18} color="#0D1117" /></Link>
+                </Row>
+
             </Navbar.Collapse>
 
 

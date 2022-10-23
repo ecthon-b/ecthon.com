@@ -16,8 +16,8 @@ export function Main() {
                 backgroundSize: "cover",
                 "@smMax": {
                     width: "100%",
+                    height: "100%",
                     padding: "0 1rem",
-
                 }
             }}
         >
@@ -53,7 +53,10 @@ export function Main() {
                     css={{
                         textAlign: "center",
                         color: "#606162",
-                        mt: "140px"
+                        mt: "140px",
+                        "@smMax": {
+                            mt: "100px"
+                        }
                     }}
                 >
                     OLÁ, EU SOU 🖐️
@@ -90,7 +93,7 @@ export function Main() {
                 <Link css={{
                     padding: "0.5rem",
                     borderRadius: "$rounded",
-                    background: "#2B2F35"
+                    background: "#2B2F35",
                 }}><FaLinkedin size={24} color="#0D1117" /></Link>
                 <Link css={{
                     padding: "0.5rem",
@@ -108,7 +111,12 @@ export function Main() {
                 css={{
                     margin: "100px auto 0 auto",
                     alignItems: "center",
-                    justifyContent: "center"
+                    justifyContent: "center",
+                    "@smMax": {
+                        padding: "0 16px",
+                        margin: "32px auto",
+                        textAlign: "center",
+                    }
                 }}
             >
                 <Text
