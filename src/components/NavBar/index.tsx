@@ -43,6 +43,9 @@ export function NavBar() {
             <Navbar.Collapse
                 css={{
                     bg: "transparent",
+                    ul: {
+                        overflowY: "hidden"
+                    }
                 }}
             >
                 {collapseItems.map((item, index) => (
