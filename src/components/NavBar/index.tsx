@@ -45,9 +45,6 @@ export function NavBar() {
                 css={{
                     margin: "0 auto",
                     bg: "transparent",
-                    ul: {
-                        overflow: "hidden"
-                    }
                 }}
             >
                 {collapseItems.map((item, index) => (
