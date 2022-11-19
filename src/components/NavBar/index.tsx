@@ -52,7 +52,10 @@ export function NavBar() {
                         key={item}
                         css={{
                             width: "1360px",
-                            margin: "0 auto"
+                            margin: "0 auto",
+                            "@smMax": {
+                                width: "100%",
+                            }
                         }}
                     >
 
@@ -75,7 +78,10 @@ export function NavBar() {
                 <Row
                     css={{
                         width: "1360px",
-                        margin: "0 auto"
+                        margin: "0 auto",
+                        "@smMax": {
+                            width: "100%",
+                        }
                     }}
                 >
                     <Row
