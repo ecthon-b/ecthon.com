@@ -9,6 +9,7 @@ export function NavBar() {
         "Home",
         "Portfolio",
         "Sobre",
+        "Contato"
     ]
     return (
         <Navbar
@@ -42,17 +43,25 @@ export function NavBar() {
             </Navbar.Content>
             <Navbar.Collapse
                 css={{
+                    margin: "0 auto",
                     bg: "transparent",
+                    ul: {
+                        overflow: "hidden"
+                    }
                 }}
             >
                 {collapseItems.map((item, index) => (
                     <Navbar.CollapseItem
                         key={item}
+                        css={{
+                            width: "1360px",
+                            margin: "0 auto"
+                        }}
                     >
+
                         <Link
                             css={{
                                 color: "#2B2F35",
-                                minWidth: "100%",
                                 fontSize: "2rem",
                                 fontWeight: "$semibold",
                                 transition: "color 0.2s",
@@ -66,33 +75,57 @@ export function NavBar() {
                         </Link>
                     </Navbar.CollapseItem>
                 ))}
-
                 <Row
                     css={{
-                        width: "208px",
-                        // justifyContent: "space-between",
-                        alignItem: "center",
-                        mt: "2rem",
-                        // margin: "0 auto"
+                        width: "1360px",
+                        margin: "0 auto"
                     }}
                 >
-                    <Link css={{
-                        padding: "0.5rem",
-                        borderRadius: "$rounded",
-                        background: "#2B2F35",
-                        mr: "2rem"
-                    }}><FaLinkedin size={18} color="#0D1117" /></Link>
-                    <Link css={{
-                        padding: "0.5rem",
-                        borderRadius: "$rounded",
-                        background: "#2B2F35",
-                        mr: "2rem"
-                    }}><FaGithub size={18} color="#0D1117" /></Link>
-                    <Link css={{
-                        padding: "0.5rem",
-                        borderRadius: "$rounded",
-                        background: "#2B2F35"
-                    }}><BsInstagram size={18} color="#0D1117" /></Link>
+                    <Row
+                        css={{
+                            width: "208px",
+                            // justifyContent: "space-between",
+                            alignItem: "center",
+                            mt: "2rem",
+                            // margin: "0 auto"
+                        }}
+                    >
+                        <Link css={{
+                            padding: "0.5rem",
+                            borderRadius: "$rounded",
+                            background: "#2B2F35",
+                            color: "#0D1117",
+                            mr: "2rem",
+                            transition: "0.3s",
+                            '&:hover': {
+                                color: "#fff",
+                                background: "#514EFF"
+                            },
+                        }}><FaLinkedin size={18} /></Link>
+                        <Link css={{
+                            padding: "0.5rem",
+                            borderRadius: "$rounded",
+                            background: "#2B2F35",
+                            mr: "2rem",
+                            color: "#0D1117",
+                            transition: "0.3s",
+                            '&:hover': {
+                                color: "#fff",
+                                background: "#514EFF"
+                            },
+                        }}><FaGithub size={18} /></Link>
+                        <Link css={{
+                            padding: "0.5rem",
+                            borderRadius: "$rounded",
+                            background: "#2B2F35",
+                            color: "#0D1117",
+                            transition: "0.3s",
+                            '&:hover': {
+                                color: "#fff",
+                                background: "#514EFF"
+                            },
+                        }}><BsInstagram size={18} /></Link>
+                    </Row>
                 </Row>
 
             </Navbar.Collapse>

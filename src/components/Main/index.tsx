@@ -122,10 +122,13 @@ export function Main() {
                 <Text
                     css={{
                         textAlign: "center",
-                        color: "#2B2F35"
+                        color: "#2B2F35",
+                        "@smMax": {
+                            width: "260px"
+                        }
                     }}
                 >
-                    Precisando de ajuda com algum projeto? <Text as="span" css={{ color: "#514EFF" }}>Enviar mensagem.</Text>
+                    Precisando de ajuda com algum projeto? <Text as="a" css={{ color: "#514EFF" }}>Enviar mensagem.</Text>
                 </Text>
             </Row>
         </Col>
